@@ -1,6 +1,6 @@
 ﻿import React from 'react';
-import IndividualLoanDetail from './components/IndividualLoanDetail';
+import DynamicUserDetails from './components/DynamicUserDetails';
 
 export default () => (
-    <IndividualLoanDetail></IndividualLoanDetail>
+    <DynamicUserDetails></DynamicUserDetails>
 );

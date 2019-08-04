@@ -73,10 +73,29 @@
     }
 }
 
+h1 {
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    margin-bottom: 0px;
+}
+
 body {
     color: black;
     background-color: gainsboro;
     font-family: Arial;
+}
+
+a, a:link, a:visited {
+    text-align: center;
+    text-decoration: underline;
+}
+
+    a:hover, a:active {
+        color: royalblue;
+    }
+
+.userselected {
+    text-decoration: line-through;
 }
 
 
@@ -85,9 +104,22 @@ body {
     flex-direction: row;
     border-width: thin;
     border-style: solid;
+    border-top-style: none;
     border-left-style: none;
     border-right-style: none;
     justify-content: space-between;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 20px;
+}
+
+.flexItem {
+    flex-grow: 1;
+    width: 20%;
 }
 
 .major {
@@ -142,7 +174,7 @@ section {
         border-width: thin;
         padding: 10px;
         background-color: lightgray;
-        margin:0px;
+        margin: 0px;
     }
 
     section > div {
@@ -150,19 +182,43 @@ section {
         flex-direction: row;
         border-style: solid;
         border-width: thin;
-        margin:0px;
-        vertical-align:central;
-        background-color:whitesmoke;
+        margin: 0px;
+        vertical-align: central;
+        background-color: whitesmoke;
     }
 
         section > div > span {
             font-size: 10px;
             padding: 13px;
-            padding-left:20px;
+            padding-left: 20px;
             flex-grow: 1;
             vertical-align: central;
         }
 
-        section input{
-            margin:0px;
+    section input {
+        margin: 0px;
+    }
+
+    section > section {
+        margin: 0px;
+        width: 100%;
+        border: none;
+        border-style: solid;
+        border-width: thin;
+        border-top-style: none;
+    }
+
+        section > section > div {
+            border: none;
         }
+
+            section > section > div > span {
+                padding-bottom: 5px;
+                padding-top: 5px;
+                flex-grow: 1;
+                width: 32.5%;
+            }
+
+.firstSpan {
+    width: 35%;
+}

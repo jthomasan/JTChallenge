@@ -1,6 +1,8 @@
 ﻿import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import PersonalLoanSnapShot from './PersonalLoanSnapShot';
+import { actionCreators } from '../store/Carryover';
 
 //The below line is an inline style. This is just to demonstrate knowledge of writing inline styles.
 const alStyle = {
@@ -8,20 +10,6 @@ const alStyle = {
     width: 'auto',
     float: 'right',
 }
-
-const data =
-    [
-        {
-            orderNumber: "1",
-            loanAccountNumber: "121212",
-        }
-        ,
-
-        {
-            orderNumber: "2",
-            loanAccountNumber: "343433",
-        }
-    ];
 
 //The below component is the parent component of all the other components required for this solution.
 const IndividualLoanDetails = props => (
@@ -38,7 +26,7 @@ const IndividualLoanDetails = props => (
                     <span className="leftPositioned">
                         Carryover / Payout Amount
                     </span>
-                    <span className="rightPositioned" style={alStyle}>$0</span>
+                    <span className="rightPositioned" style={alStyle}>${props.CarryOver}</span>
                 </div>
             </div>
             <div className="minor">
@@ -53,7 +41,10 @@ const IndividualLoanDetails = props => (
             </div>
         </div>
 
-        <PersonalLoanSnapShot Data={data}></PersonalLoanSnapShot>
+        <PersonalLoanSnapShot Data={props.Data}></PersonalLoanSnapShot>
     </div>
 );
-export default connect()(IndividualLoanDetails);
+export default connect(
+    state => state.carryOver,
+    dispatch => bindActionCreators(actionCreators, dispatch)
+)(IndividualLoanDetails);

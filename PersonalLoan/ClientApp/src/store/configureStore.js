@@ -1,10 +1,13 @@
 ﻿import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
+import * as CarryOver from './Carryover'
+import * as IndividualDetails from './IndividualLoanDetail'
 
 export default function configureStore(history, initialState) {
-  const reducers = {
-   
+    const reducers = {
+        carryOver: CarryOver.reducer,
+        individualDetails: IndividualDetails.reducer
   };
 
   const middleware = [
