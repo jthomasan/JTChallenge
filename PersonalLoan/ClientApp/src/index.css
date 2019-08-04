@@ -34,7 +34,7 @@
     }
 
     .rightPositioned {
-        padding-right:0px;
+        padding-right: 0px;
     }
 }
 
@@ -130,3 +130,39 @@ body {
     padding-top: 10px;
     vertical-align: middle;
 }
+
+section {
+    margin: 50px;
+    width: 55%;
+}
+
+    section > h1 {
+        font-size: 12px;
+        border-style: solid;
+        border-width: thin;
+        padding: 10px;
+        background-color: lightgray;
+        margin:0px;
+    }
+
+    section > div {
+        display: flex;
+        flex-direction: row;
+        border-style: solid;
+        border-width: thin;
+        margin:0px;
+        vertical-align:central;
+        background-color:whitesmoke;
+    }
+
+        section > div > span {
+            font-size: 10px;
+            padding: 13px;
+            padding-left:20px;
+            flex-grow: 1;
+            vertical-align: central;
+        }
+
+        section input{
+            margin:0px;
+        }

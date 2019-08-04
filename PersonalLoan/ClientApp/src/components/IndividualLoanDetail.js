@@ -1,12 +1,29 @@
 ﻿import React from 'react';
 import { connect } from 'react-redux';
+import PersonalLoanSnapShot from './PersonalLoanSnapShot';
 
+//The below line is an inline style. This is just to demonstrate knowledge of writing inline styles.
 const alStyle = {
     textAlign: 'right',
     width: 'auto',
     float: 'right',
-    }
+}
 
+const data =
+    [
+        {
+            orderNumber: "1",
+            loanAccountNumber: "121212",
+        }
+        ,
+
+        {
+            orderNumber: "2",
+            loanAccountNumber: "343433",
+        }
+    ];
+
+//The below component is the parent component of all the other components required for this solution.
 const IndividualLoanDetails = props => (
     <div>
         <h1>
@@ -35,6 +52,8 @@ const IndividualLoanDetails = props => (
                 <button className="rounderCorner spaceForButton">Apply for new personal loan</button>
             </div>
         </div>
+
+        <PersonalLoanSnapShot Data={data}></PersonalLoanSnapShot>
     </div>
 );
 export default connect()(IndividualLoanDetails);
