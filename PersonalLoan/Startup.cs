@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using PersonalLoan.Data.Models;
 using PersonalLoan.Interfaces;
 using PersonalLoan.Repositories;
@@ -36,6 +37,7 @@ namespace PersonalLoan
 
             var dbContext = services.AddDbContext<PersonalLoanContext>
                 (options => options.UseSqlServer(_config.ConnectionString));
+            services.TryAddScoped<IPersonalLoanDetailsRepository, PersonalLoadDetailsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,9 +53,7 @@ namespace PersonalLoan
                 app.UseHsts();
             }
 
-            using (var serviceScope = app.ApplicationServices
-           .GetRequiredService<IServiceScopeFactory>()
-                 .CreateScope())
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
                 using (var context = serviceScope.ServiceProvider.GetService<PersonalLoanContext>())
                 {

@@ -7,7 +7,7 @@ const PersonalLoanSnapShot = props => (
 
     props.Data.map(m =>
         <div key={m.orderNumber} >
-            <Card orderNumber={m.orderNumber} loanAccountNumber={m.loanAccountNumber} carryOverAmount={m.carryOverAmount}>
+            <Card orderNumber={m.orderNumber} loanAccountNumber={m.loanAccountNumber} carryOverAmount={m.carryOverAmount} balance={m.balance}>
                 <CarryOverDetails
                     interest={m.interest}
                     fee={m.fee}

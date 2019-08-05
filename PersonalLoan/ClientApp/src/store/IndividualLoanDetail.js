@@ -1,6 +1,6 @@
 ﻿const requestDetailsType = 'REQUEST_INDIVIDUAL_DETAILS';
 const receiveDetailsType = 'RECEIVE_INDIVIDUAL_DETAILS';
-const initialState = { id:0, data: [], isLoading: false };
+const initialState = { id:0, data: [], isLoading: false, totalLoans: 0, };
 
 export const actionCreators = {
     requestDetails: id => async (dispatch, getState) => {
@@ -35,7 +35,8 @@ export const reducer = (state, action) => {
             ...state,
             id: action.id,
             data: action.data,
-            isLoading: false
+            isLoading: false,
+            totalLoans: action.data.length,
         };
     }
 

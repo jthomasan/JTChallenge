@@ -34,7 +34,7 @@ class Card extends Component {
                             Balance
                         </span>
                         <span>
-                            $1212
+                            {this.props.balance}
                         </span>
                         <span>
                             <input type="checkbox" onChange={this.handleChecked} />

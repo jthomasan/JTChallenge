@@ -19,7 +19,7 @@ class FetchData extends Component {
                     <a className={`flexItem ${this.props.id === 2 ? 'userselected' : ''}`} onClick={() => this.props.requestDetails(2)} disabled={this.props.id === 2}>User 2</a>
                     <a className={`flexItem ${this.props.id === 3 ? 'userselected' : ''}`} onClick={() => this.props.requestDetails(3)} disabled={this.props.id === 3}>User 3</a></div>
                 {!this.props.isLoading &&
-                    <IndividualLoanDetails Data={this.props.data} />
+                    <IndividualLoanDetails Data={this.props.data} TotalLoans={this.props.totalLoans} />
                 }
                 {this.props.isLoading &&
                     <span>Loading...</span>
