@@ -1,4 +1,6 @@
-﻿const requestDetailsType = 'REQUEST_INDIVIDUAL_DETAILS';
+﻿import { initialiseCarryOverType } from './Carryover'
+
+const requestDetailsType = 'REQUEST_INDIVIDUAL_DETAILS';
 const receiveDetailsType = 'RECEIVE_INDIVIDUAL_DETAILS';
 const initialState = { id:0, data: [], isLoading: false, totalLoans: 0, };
 
@@ -18,6 +20,9 @@ export const actionCreators = {
         const data = await response.json();
 
         dispatch({ type: receiveDetailsType, id, data });
+
+        {/*The below code is responsible for intitalising the carryOver amount. The logic is written in carry over reducer.*/ }
+        dispatch({ type: initialiseCarryOverType });
     }
 };
 
