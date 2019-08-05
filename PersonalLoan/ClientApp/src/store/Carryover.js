@@ -1,5 +1,5 @@
-﻿const incrementCarryOverType = 'INCREMENT_CARRYOVER';
-const decrementCarryOverType = 'DECREMENT_CARRYOVER';
+﻿export const incrementCarryOverType = 'INCREMENT_CARRYOVER';
+export const decrementCarryOverType = 'DECREMENT_CARRYOVER';
 const initialState = { CarryOver: 0 };
 
 export const actionCreators = {

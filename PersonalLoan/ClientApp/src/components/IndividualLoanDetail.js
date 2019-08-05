@@ -43,7 +43,7 @@ const IndividualLoanDetails = props => (
                 </div>
             </div>
             <div className="minor">
-                <button className="rounderCorner spaceForButton">Apply for increased loan amount</button>
+                <button className="rounderCorner spaceForButton" disabled={props.CarryOver <= 0}>Apply for increased loan amount</button>
             </div>
         </div>
         <div className="flex-container">

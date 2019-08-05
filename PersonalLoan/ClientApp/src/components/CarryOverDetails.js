@@ -38,4 +38,4 @@ const CarryOverDetails = props => (
         </div>
     </section>
 );
-export default connect()(CarryOverDetails);
+export default CarryOverDetails;
