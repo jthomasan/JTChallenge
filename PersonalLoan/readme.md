@@ -27,7 +27,7 @@ in this [Screenshot-2](/images/2.Solution-2.png)
 5. Immediate below section displays a number of cards which is equivalent to the number of personal loans associated with the user as highlighted in this [Screenshot-4](/images/4.Solution-4.png)
 6. Checking the checkbox on each card will expand itself to show the full details of the personal loan as can be seen in this [Screenshot-5](/images/5.Solution-5.png)
 7. Additionally upon checking this checkbox, the carry over amount associated with this loan will be added to the total carry over amount dispayed in the top right 
-hand side as highlighted in this [Screenshot-6](/images/5.Solution-5.png)
+hand side as highlighted in this [Screenshot-6](/images/6.Solution-6.png)
 8. For every loan that are selected by checking the checkbox, the total carry over amount will gets addded up and is reflected in top section.
 9. Upon unchecking a personal loan will deduct the carry over amount associated with that personal loan from the total carry over amount.
 
