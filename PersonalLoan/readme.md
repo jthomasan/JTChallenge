@@ -29,4 +29,5 @@ in this [Screenshot-2](/images/2.Solution-2.png)
 7. Additionally upon checking this checkbox, the carry over amount associated with this loan will be added to the total carry over amount dispayed in the top right 
 hand side as highlighted in this [Screenshot-6](/images/5.Solution-5.png)
 8. For every loan that are selected by checking the checkbox, the total carry over amount will gets addded up and is reflected in top section.
+9. Upon unchecking a personal loan will deduct the carry over amount associated with that personal loan from the total carry over amount.
 
