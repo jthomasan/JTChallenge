@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Card from './CustomCard';
 import CarryOverDetails from './CarryOverDetails'
 
+{/*The component to display the card and its children.*/ }
 const PersonalLoanSnapShot = props => (
 
     props.Data.map(m =>

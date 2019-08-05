@@ -2,6 +2,8 @@
 const receiveDetailsType = 'RECEIVE_INDIVIDUAL_DETAILS';
 const initialState = { id:0, data: [], isLoading: false, totalLoans: 0, };
 
+
+{/*action responsible for fetching data from server.*/ }
 export const actionCreators = {
     requestDetails: id => async (dispatch, getState) => {
         if (id === getState().individualDetails.id) {
@@ -19,6 +21,7 @@ export const actionCreators = {
     }
 };
 
+{/*Logic for updating the state based on the progressand response of action*/ }
 export const reducer = (state, action) => {
     state = state || initialState;
 

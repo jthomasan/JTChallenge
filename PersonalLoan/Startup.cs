@@ -19,6 +19,8 @@ namespace PersonalLoan
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+            //retrieves the connection details and any other details mentioned inside ConfigRepository from configuration object.
             _config = Configuration.Get<ConfigRepository>();
         }
 
@@ -53,6 +55,9 @@ namespace PersonalLoan
                 app.UseHsts();
             }
 
+            //the below block of code resolves the PersonalLoanContext and do a migration with the database.
+            //Initial seeding of data is also setup in the migration. Hence setting an appropriate connection string is
+            //enough for setting up and running this project.
             using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
                 using (var context = serviceScope.ServiceProvider.GetService<PersonalLoanContext>())

@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from '../store/Carryover';
 
+
+{/*This component is a custom card component which will give a snapshot of a single personal loan detail with the ability to expand upon selecting a checkbox.*/ }
 class Card extends Component {
 
     //this is having a local state just to handle the checkbox checked state
@@ -40,6 +42,8 @@ class Card extends Component {
                             <input type="checkbox" onChange={this.handleChecked} />
                         </span>
                     </div>
+
+                    {/*Upon checking the checkbox the children html is rendered here*/}
                     {this.state.isChecked &&
                         this.props.children
                     }

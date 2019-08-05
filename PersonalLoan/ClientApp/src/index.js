@@ -19,6 +19,8 @@ const store = configureStore(history, initialState);
 
 const rootElement = document.getElementById('root');
 
+
+// Wraps the application with the store provider. This acts as the entry point for the entire application
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>

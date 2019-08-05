@@ -1,6 +1,6 @@
 ﻿import React from 'react';
-import { connect } from 'react-redux';
 
+{/*This component is responsible for prviding all the details upon the selection of associated personal loan.*/ }
 const CarryOverDetails = props => (
     <section>
         <div>
